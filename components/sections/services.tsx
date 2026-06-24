@@ -1,0 +1,122 @@
+
+
+"use client";
+
+import { motion } from "framer-motion";
+import { ServiceCard } from "@/components/service-card";
+import {
+  Calculator,
+  FileText,
+  TrendingUp,
+  DollarSign,
+  Shield,
+} from "lucide-react";
+
+export function Services() {
+  const services = [
+    {
+      icon: FileText,
+      title: "Audit & Assurance",
+      description:
+        "Statutory audits, internal audits, concurrent audits and tax audits across various entities.",
+    },
+    {
+      icon: Calculator,
+      title: "Taxation",
+      description:
+        "Direct and indirect tax planning, GST compliance, tax audits and representation before authorities.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Financial Advisory",
+      description:
+        "Budgeting, forecasting, financial analysis and business consulting services.",
+    },
+    {
+      icon: Shield,
+      title: "Internal Audit & Process Review",
+      description:
+        "Internal audit and business process review with focus on risk assessment and internal controls.",
+    },
+    {
+      icon: DollarSign,
+      title: "Business Consulting",
+      description:
+        "Costing, profitability analysis, SOP development and strategic advisory.",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  return (
+    <section id="services" className="py-20 bg-[#F8FAFC]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          className="text-center space-y-4 mb-16"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="inline-block px-4 py-1 bg-blue-50 rounded-full">
+            <p className="text-sm font-semibold text-[#2563EB]">Our Services</p>
+          </div>
+
+          {/* ✅ FIXED */}
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#0B1F3B] font-poppins">
+            Professional Services
+          </h2>
+
+          {/* ✅ FIXED */}
+          <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
+            We provide audit, taxation, compliance and financial advisory
+            services tailored to diverse business needs.
+          </p>
+        </motion.div>
+
+        {/* Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {services.map((service, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <ServiceCard {...service} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
