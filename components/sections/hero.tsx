@@ -68,17 +68,17 @@ export function Hero() {
             animate="visible"
           >
             <motion.div className="space-y-4" variants={itemVariants}>
-              {/* ✅ Updated Heading */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#0B1F3B] leading-tight font-poppins text-balance">
-                Vijay K. Jain & Associates <br />
-                <span className="text-[#2563EB]">Chartered Accountants</span>
+              {/* Heading */}
+              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold text-[#0B1F3B] leading-tight font-poppins">
+                Audit, Taxation &<br />
+                <span className="text-[#2563EB]">Business Advisory Services</span>
               </h1>
 
-              {/* ✅ Updated Description */}
+              {/* Description */}
               <p className="text-lg text-[#6B7280] leading-relaxed max-w-md">
-                Established in 1988, we provide trusted audit, taxation,
-                compliance and financial advisory services backed by over three
-                decades of professional experience.
+                Helping businesses across industries build stronger financial,
+                compliance and governance foundations through practical and
+                reliable professional services.
               </p>
             </motion.div>
 
@@ -92,19 +92,12 @@ export function Hero() {
                   size="lg"
                   className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white group"
                 >
-                  Contact Us
+                  Schedule Consultation
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
 
-              <Link href="#services">
-                {/* <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-[#D1D5DB] text-[#0B1F3B] hover:bg-[#F3F4F6]"
-                >
-                  Explore Services
-                </Button> */}
+              <Link href="/services">
                 <Button
                   size="lg"
                   variant="outline"
@@ -123,7 +116,7 @@ export function Hero() {
               {[
                 { value: "30+", label: "Years Experience" },
                 { value: "100+", label: "Clients Served" },
-                { value: "Multiple", label: "Industries" },
+                { value: "20+", label: "Industries" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}

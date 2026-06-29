@@ -8,7 +8,7 @@ export function Team() {
       name: 'CA Sunny Jain',
       title: 'Partner',
       expertise:
-        'Audit, Taxation & Financial Consulting | Budgeting, Costing & Risk Advisory',
+        'Audit, Taxation & Financial Consulting | Budgeting, Costing & Risk Advisory | Wealth Management & Business Consulting',
       image: '/placeholder-user.jpg',
     },
     {

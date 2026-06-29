@@ -37,7 +37,7 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3B]">Phone</h3>
-                <p className="text-[#6B7280]">+91 9827072872</p>
+                <a href="tel:+919713700582" className="text-[#6B7280] hover:text-[#2563EB] transition-colors">+91 9713700582</a>
               </div>
             </div>
 
@@ -50,7 +50,7 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3B]">Email</h3>
-                <p className="text-[#6B7280]">cavijayjain2011@yahoo.com</p>
+                <a href="mailto:cavijayjain2011@yahoo.com" className="text-[#6B7280] hover:text-[#2563EB] transition-colors">cavijayjain2011@yahoo.com</a>
               </div>
             </div>
 
@@ -64,8 +64,8 @@ export function Contact() {
               <div>
                 <h3 className="font-semibold text-[#0B1F3B]">Address</h3>
                 <p className="text-[#6B7280]">
-                  306, Block-A, The One Building
-                  <br />5 RNT Marg, Indore – 452003
+                  307, Manas Bhawan Extension,
+                  <br />11, RNT Marg, Indore – 452001
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export function Contact() {
               <div>
                 <h3 className="font-semibold text-[#0B1F3B]">Working Hours</h3>
                 <p className="text-[#6B7280]">
-                  Monday - Friday: 9:30 AM - 6:00 PM
+                  Monday - Friday: 11:00 AM - 7:00 PM
                   <br />
                   Saturday: By Appointment
                 </p>
@@ -100,7 +100,7 @@ export function Contact() {
             width="100%"
             height="100%"
             style={{ border: "none" }}
-            src="https://www.google.com/maps?q=Manas+Bhavan+RNT+Marg+Indore&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.6!2d75.8744075!3d22.7162641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd5ca9946a27%3A0x46637890a3d140c5!2sVijay+K+Jain+and+Associates!5e0!3m2!1sen!2sin!4v1719000000000!5m2!1sen!2sin"
             allowFullScreen
             loading="lazy"
           ></iframe>

@@ -17,13 +17,11 @@ export function Footer() {
               <Image
                 src="/footer_logo.png"
                 alt="Vijay K Jain & Associates"
-                width={80}
-                height={80}
-                className="object-contain"
+                width={48}
+                height={48}
+                className="object-contain flex-shrink-0"
               />
-
-              {/* ✅ Bigger + responsive text */}
-              <span className="font-bold text-white font-poppins text-xl lg:text-2xl leading-tight">
+              <span className="font-bold text-white font-poppins text-lg leading-tight whitespace-nowrap">
                 Vijay K Jain & Associates
               </span>
             </Link>
@@ -39,7 +37,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-white">Services</h3>
             <ul className="space-y-2 text-sm">
-              {["Audits", "Advisory", "Taxation", "Risk Management"].map(
+              {["Audit & Assurance", "Taxation", "Financial Advisory", "Risk & Compliance", "Corporate Services", "Business Consulting"].map(
                 (item, i) => (
                   <li key={i}>
                     <Link
@@ -69,6 +67,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/career" className="hover:text-[#2563EB]">
+                  Careers
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-[#2563EB]">
                   Contact
                 </Link>
@@ -95,10 +98,10 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#2563EB] mt-0.5" />
                 <a
-                  href="tel:+919827072872"
+                  href="tel:+919713700582"
                   className="hover:text-white hover:underline transition"
                 >
-                  +91 9827072872
+                  +91 9713700582
                 </a>
               </div>
 
@@ -112,12 +115,6 @@ export function Footer() {
                   >
                     cavijayjain2011@yahoo.com
                   </a>
-                  <a
-                    href="mailto:poojasanghvi1905@gmail.com"
-                    className="hover:text-white hover:underline transition"
-                  >
-                    poojasanghvi1905@gmail.com
-                  </a>
                 </div>
               </div>
 
@@ -125,8 +122,7 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-[#2563EB] mt-0.5" />
                 <span>
-                  306, Block-A, The One Building <br />5 RNT Marg, Indore –
-                  452003
+                  307, Manas Bhawan Extension, <br />11, RNT Marg, Indore – 452001
                 </span>
               </div>
             </div>

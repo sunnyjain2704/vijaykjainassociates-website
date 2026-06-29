@@ -40,22 +40,34 @@ const team = [
     name: "CA Sunny Jain",
     title: "Partner",
     qualification: "B.Com, FCA, DISA, FAFD (Cert.), CCCA (Cert.)",
-    expertise:
-      "Statutory and internal audits, Tax planning and advisory, Budgeting, forecasting and financial analysis, Costing and profitability analysis, Risk assessment and SOP development, Wealth management and business consulting",
+    expertise: [
+      "Statutory and internal audits",
+      "Tax planning and advisory",
+      "Budgeting, forecasting and financial analysis",
+      "Costing, risk advisory and wealth management",
+    ],
   },
   {
     name: "CA (Dr.) Subhash Mathur",
     title: "Partner",
     qualification: "B.Sc., FCA, LL.B., MBA, Ph.D.",
-    expertise:
-      "Corporate advisory and financial consulting, Strategic management and business restructuring, Industry-specific financial solutions, CSR and governance advisory",
+    expertise: [
+      "Corporate advisory and financial consulting",
+      "Strategic management and business restructuring",
+      "Industry-specific financial solutions",
+      "CSR and governance advisory",
+    ],
   },
   {
     name: "CA Pooja Jain",
     title: "Partner",
     qualification: "B.Com, ACA, Ind-AS (Cert.)",
-    expertise:
-      "GST compliance and advisory, Direct and indirect tax planning, Statutory audits of corporates and other entities, Resolving day-to-day taxation issues",
+    expertise: [
+      "GST compliance and advisory",
+      "Direct and indirect tax planning",
+      "Statutory audits of corporates and other entities",
+      "Resolving day-to-day taxation issues",
+    ],
   },
 ];
 
@@ -145,11 +157,7 @@ export default function AboutPage() {
                   </h2>
 
                   <p className="text-lg text-[#6B7280] leading-relaxed">
-                    M/s Vijay K. Jain & Associates is a partnership firm of Chartered Accountants based in Indore, established in 1988. With over three decades of professional experience, the firm has built a strong reputation for delivering reliable, insightful, and value-driven financial and advisory services.
-                  </p>
-
-                  <p className="text-lg text-[#6B7280] leading-relaxed">
-                    Our practice is driven by a commitment to excellence, integrity, and a deep understanding of evolving business and regulatory environments. We cater to a diverse clientele across industries, offering tailored solutions in audit, taxation, compliance, and financial advisory.
+                    M/s Vijay K. Jain & Associates is an Indore-based CA firm established in 1988. Committed to excellence and integrity, we serve a diverse clientele across industries with tailored solutions in audit, taxation, compliance, and financial advisory.
                   </p>
                 </motion.div>
 
@@ -178,9 +186,9 @@ export default function AboutPage() {
                       key={index}
                       custom={index} // ✅ critical fix
                       variants={itemVariants}
-                      className="flex items-start gap-3"
+                      className="flex items-center gap-3"
                     >
-                      <span className="mt-2 h-2 w-2 bg-[#2563EB] rounded-full"></span>
+                      <span className="h-2 w-2 flex-shrink-0 bg-[#2563EB] rounded-full"></span>
                       <p className="text-lg text-[#6B7280]">{item}</p>
                     </motion.div>
                   ))}
@@ -222,7 +230,7 @@ export default function AboutPage() {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="bg-[#F8FAFC] rounded-lg p-8 text-center hover:bg-blue-50 transition-colors"
+                    className="bg-[#F8FAFC] rounded-lg p-8 text-center hover:bg-blue-50 transition-colors flex flex-col"
                   >
                     <div className="flex justify-center mb-4">
                       <div className="p-3 bg-blue-100 rounded-lg">
@@ -269,10 +277,19 @@ export default function AboutPage() {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-white rounded-lg border border-[#E5E7EB] p-6 text-center hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-lg border border-[#E5E7EB] p-6 text-center hover:shadow-lg transition-shadow flex flex-col"
                 >
                   <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-[#2563EB] to-[#1D4ED8] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    {member.name.split(" ").map((n) => n[0]).join("")}
+                    {(() => {
+                      const skip = new Set(["ca", "dr.", "(dr.)", "(fca)", "fca"]);
+                      return member.name
+                        .split(" ")
+                        .filter((n) => !skip.has(n.toLowerCase()) && !n.startsWith("("))
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase();
+                    })()}
                   </div>
                   <h3 className="text-lg font-bold text-[#0B1F3B] mb-1">
                     {member.name}
@@ -284,8 +301,8 @@ export default function AboutPage() {
                     {member.qualification}
                   </p>
                   <ul className="text-sm text-[#6B7280] text-left list-disc pl-4 space-y-1">
-                    {member.expertise.split(",").map((item, i) => (
-                      <li key={i}>{item.trim()}</li>
+                    {member.expertise.map((item, i) => (
+                      <li key={i}>{item}</li>
                     ))}
                   </ul>
                 </motion.div>

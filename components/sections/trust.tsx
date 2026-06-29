@@ -10,25 +10,25 @@ export function Trust() {
       icon: Award,
       title: 'ICAI Registered',
       description:
-        'Firm and professionals registered with the Institute of Chartered Accountants of India (ICAI)',
+        'All professionals registered with the Institute of Chartered Accountants of India (ICAI)',
     },
     {
       icon: Shield,
       title: 'Strong Compliance Focus',
       description:
-        'Committed to maintaining high standards in audit, taxation and regulatory compliance',
+        'High standards in audit, taxation and regulatory compliance across all engagements',
     },
     {
       icon: Users,
-      title: 'Diverse Industry Experience',
+      title: 'Diverse Industry Exposure',
       description:
-        'Serving clients across manufacturing, services, real estate, trading and hospitality sectors',
+        'Clients across manufacturing, real estate, trading, hospitality and service sectors',
     },
     {
       icon: CheckCircle,
       title: '30+ Years Experience',
       description:
-        'Established in 1988 with over three decades of professional experience',
+        'Established in 1988 with three decades of trusted professional practice',
     },
   ];
 
@@ -91,9 +91,9 @@ export function Trust() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-[#F8FAFC] rounded-lg border border-[#E5E7EB] p-8 hover:border-[#2563EB] hover:shadow-lg transition-all duration-300"
+                className="group bg-[#F8FAFC] rounded-lg border border-[#E5E7EB] p-8 hover:border-[#2563EB] hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div className="mb-4 inline-block rounded-lg bg-blue-100 p-3 group-hover:bg-[#2563EB] transition-all">
+                <div className="mb-4 w-fit rounded-lg bg-blue-100 p-3 group-hover:bg-[#2563EB] transition-all">
                   <Icon className="h-6 w-6 text-[#2563EB] group-hover:text-white transition-colors" />
                 </div>
 

@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 9827072872"],
+    details: ["+91 9713700582"],
   },
   {
     icon: Mail,
@@ -22,12 +22,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office Address",
-    details: ["306, Block-A, The One Building", "5 RNT Marg, Indore – 452003"],
+    details: ["307, Manas Bhawan Extension,", "11, RNT Marg, Indore – 452001"],
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Monday – Friday: 9:30 AM – 6:00 PM", "Saturday: By Appointment"],
+    details: ["Monday – Friday: 11:00 AM – 7:00 PM", "Saturday: By Appointment"],
   },
 ];
 
@@ -104,11 +104,15 @@ export default function ContactPage() {
                               {info.title}
                             </h3>
                             <div className="space-y-1">
-                              {info.details.map((detail, i) => (
-                                <p key={i} className="text-sm text-[#6B7280]">
-                                  {detail}
-                                </p>
-                              ))}
+                              {info.details.map((detail, i) =>
+                                detail.includes("@") ? (
+                                  <a key={i} href={`mailto:${detail}`} className="text-sm text-[#6B7280] hover:text-[#2563EB] transition-colors">{detail}</a>
+                                ) : detail.startsWith("+91") ? (
+                                  <a key={i} href={`tel:${detail.replace(/\s/g, "")}`} className="text-sm text-[#6B7280] hover:text-[#2563EB] transition-colors">{detail}</a>
+                                ) : (
+                                  <p key={i} className="text-sm text-[#6B7280]">{detail}</p>
+                                )
+                              )}
                             </div>
                           </div>
                         </div>
@@ -131,6 +135,22 @@ export default function ContactPage() {
                 </h2>
                 <ContactForm />
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map */}
+        <section className="pb-0">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-0">
+            <div className="rounded-lg overflow-hidden h-96">
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: "none" }}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.6!2d75.8744075!3d22.7162641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd5ca9946a27%3A0x46637890a3d140c5!2sVijay+K+Jain+and+Associates!5e0!3m2!1sen!2sin!4v1719000000000!5m2!1sen!2sin"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
         </section>

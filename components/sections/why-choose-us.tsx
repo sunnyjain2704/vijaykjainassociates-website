@@ -12,9 +12,9 @@ export function WhyChooseUs() {
     },
     {
       icon: Users,
-      title: "Industry Experience",
+      title: "Expert Professionals",
       description:
-        "Serving clients across multiple sectors with over 30 years of professional experience.",
+        "ICAI-registered CAs with deep expertise across audit, taxation, advisory and compliance domains.",
     },
     {
       icon: Lock,
@@ -57,7 +57,7 @@ export function WhyChooseUs() {
             return (
               <div
                 key={index}
-                className="group rounded-lg border border-[#1F3A5F] bg-[#0F2847] bg-opacity-80 p-8 transition-all duration-300 hover:border-[#2563EB] hover:bg-blue-900 hover:bg-opacity-20 animate-slide-up"
+                className="group flex flex-col rounded-lg border border-[#1F3A5F] bg-[#0F2847] bg-opacity-80 p-8 transition-all duration-300 hover:border-[#2563EB] hover:bg-blue-900 hover:bg-opacity-20 animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#2563EB]/5 group-hover:bg-[#2563EB]/10">

@@ -26,19 +26,31 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // In production, this would send to a backend API
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      console.error('Form submission error:', error);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: '8bf7dce2-0f2e-4abf-a1c4-9d4bf98636f1',
+          subject: `New Enquiry from ${formData.name}`,
+          from_name: 'Vijay K Jain & Associates Website',
+          ...formData,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Handle status clearing with proper cleanup
   useEffect(() => {
     if (submitStatus) {
       const timer = setTimeout(() => setSubmitStatus(null), 5000);

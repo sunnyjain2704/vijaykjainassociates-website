@@ -194,35 +194,18 @@ export function About() {
               </div>
             </motion.div>
 
-            {/* ✅ Updated Heading */}
             <motion.h2
               variants={itemVariants}
               className="text-4xl sm:text-5xl font-bold text-[#0B1F3B] font-poppins leading-tight"
             >
-              Trusted Chartered Accountant Services
+              Trusted Chartered Accountants
             </motion.h2>
 
-            {/* ✅ Updated Content */}
             <motion.p
               variants={itemVariants}
               className="text-lg text-[#6B7280] leading-relaxed"
             >
-              M/s Vijay K. Jain & Associates is a partnership firm of Chartered
-              Accountants based in Indore, established in 1988. With over three
-              decades of professional experience, the firm has built a strong
-              reputation for delivering reliable, insightful, and value-driven
-              financial and advisory services.
-            </motion.p>
-
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-[#6B7280] leading-relaxed"
-            >
-              Our practice is driven by a commitment to excellence, integrity,
-              and a deep understanding of evolving business and regulatory
-              environments. We cater to a diverse clientele across industries,
-              offering tailored solutions in audit, taxation, compliance, and
-              financial advisory.
+              M/s Vijay K. Jain & Associates is a Indore-based CA firm established in 1988. With over three decades of experience, we serve a diverse clientele across industries — delivering tailored solutions in audit, taxation, compliance, and financial advisory with a commitment to excellence and integrity.
             </motion.p>
 
             {/* ✅ Updated Points (client-aligned) */}

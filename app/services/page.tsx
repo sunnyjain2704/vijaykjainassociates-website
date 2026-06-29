@@ -21,27 +21,12 @@ const services = [
     title: "Audit & Assurance",
     subtitle: "Reliable Audit Services",
     description:
-      "Providing statutory, internal and concurrent audit services with a strong focus on compliance and accuracy.",
+      "Trusted by businesses for accurate and compliant reporting.",
     details: [
-      "Statutory Audit under Companies Act",
-      "Internal Audit Services",
-      "Concurrent & Bank Audits",
-      "IND AS Compliance & Reporting",
-      "Audit of Trusts, NGOs & Societies",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Financial Advisory",
-    subtitle: "Business & Financial Guidance",
-    description:
-      "Professional advisory services to support financial decision-making and business growth.",
-    details: [
-      "Financial Planning & Analysis",
-      "Business Valuation & Due Diligence",
-      "Business Restructuring Advisory",
-      "CMA Reports & Financial Analysis",
-      "Strategic Financial Consulting",
+      "Statutory Audits",
+      "Internal Audits",
+      "Bank & Concurrent Audits",
+      "IND AS Compliance",
     ],
   },
   {
@@ -49,13 +34,25 @@ const services = [
     title: "Taxation",
     subtitle: "Direct & Indirect Tax Services",
     description:
-      "Comprehensive taxation services covering compliance, planning, and advisory.",
+      "Strategic tax planning with proactive compliance support.",
     details: [
-      "Income Tax Planning & Return Filing",
-      "GST Compliance & Advisory",
-      "Tax Audit & Representation",
-      "Handling Tax Notices & Assessments",
-      "Direct & Indirect Tax Advisory",
+      "Income Tax Filing",
+      "GST Compliance",
+      "Tax Representation",
+      "Assessment Support",
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: "Financial Advisory",
+    subtitle: "Business & Financial Guidance",
+    description:
+      "Helping businesses make informed financial decisions.",
+    details: [
+      "Business Valuation",
+      "Due Diligence",
+      "CMA Reports",
+      "Financial Planning",
     ],
   },
   {
@@ -63,27 +60,12 @@ const services = [
     title: "Risk & Compliance",
     subtitle: "Internal Controls & Governance",
     description:
-      "Strengthening business processes through risk assessment and compliance frameworks.",
+      "Strengthening governance and operational reliability.",
     details: [
-      "Risk Assessment & Mitigation",
-      "Internal Financial Controls (IFC)",
+      "Risk Assessment",
+      "IFC Implementation",
       "Regulatory Compliance",
-      "SOP Development",
-      "Fraud Risk & Prevention",
-    ],
-  },
-  {
-    icon: DollarSign,
-    title: "Financial Consulting",
-    subtitle: "Capital & Financial Planning",
-    description:
-      "Supporting businesses with financial structuring, funding, and performance improvement.",
-    details: [
-      "Fund Raising & Banking Support",
-      "Working Capital Planning",
-      "Financial Strategy Consulting",
-      "Profitability & Cost Analysis",
-      "Budgeting & Forecasting",
+      "Fraud Prevention",
     ],
   },
   {
@@ -91,13 +73,25 @@ const services = [
     title: "Corporate Services",
     subtitle: "Business Setup & Compliance",
     description:
-      "Comprehensive support for company formation and ongoing corporate compliance.",
+      "End-to-end support for growing enterprises.",
     details: [
-      "Company Incorporation & Setup",
-      "ROC & Annual Compliance",
-      "Corporate Governance Support",
+      "Company Incorporation",
+      "ROC Compliance",
+      "Corporate Governance",
       "Regulatory Filings",
-      "Business Structuring Advisory",
+    ],
+  },
+  {
+    icon: DollarSign,
+    title: "Business Consulting",
+    subtitle: "Strategy & Growth Advisory",
+    description:
+      "Focused on sustainable growth and business efficiency.",
+    details: [
+      "Working Capital Planning",
+      "Fund Raising Support",
+      "Profitability Analysis",
+      "Budgeting & Forecasting",
     ],
   },
 ];
@@ -163,9 +157,9 @@ export default function ServicesPage() {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="group bg-white rounded-lg border border-[#E5E7EB] p-8 transition-all duration-300 hover:border-[#2563EB] hover:shadow-xl"
+                    className="group flex flex-col bg-white rounded-lg border border-[#E5E7EB] p-8 transition-all duration-300 hover:border-[#2563EB] hover:shadow-xl"
                   >
-                    <div className="mb-6 inline-block rounded-lg bg-blue-100 p-4 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
+                    <div className="mb-6 w-fit rounded-lg bg-blue-100 p-4 group-hover:bg-[#2563EB] group-hover:text-white transition-all">
                       <Icon className="h-8 w-8 text-[#2563EB] group-hover:text-white transition-colors" />
                     </div>
 
@@ -175,12 +169,11 @@ export default function ServicesPage() {
                     <p className="text-sm text-[#2563EB] font-medium mb-3">
                       {service.subtitle}
                     </p>
-                    {/* <p className="text-[#6B7280] mb-6">{service.description}</p> */}
 
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-6 flex-1">
                       {service.details.map((detail, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-[#2563EB] mt-1">•</span>
+                        <div key={i} className="flex items-center gap-2">
+                          <span className="text-[#2563EB] flex-shrink-0">•</span>
                           <p className="text-sm text-[#6B7280]">{detail}</p>
                         </div>
                       ))}
@@ -188,8 +181,7 @@ export default function ServicesPage() {
 
                     <Link href="/contact">
                       <Button
-                        variant="outline"
-                        className="w-full border-[#D1D5DB] text-[#0B1F3B] hover:bg-[#F1F5F9] hover:border-[#2563EB] hover:text-[#2563EB] transition-all duration-200"
+                        className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all duration-200"
                       >
                         Get Consultation
                       </Button>

@@ -106,7 +106,7 @@ export default function CareerPage() {
                 Careers at Vijay K Jain & Associates
               </h1>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Join our team of professionals and build your career in audit, taxation and financial advisory services
+                Join our team of professionals and build your career in audit, taxation and financial advisory
               </p>
             </motion.div>
           </div>
@@ -144,7 +144,7 @@ export default function CareerPage() {
                   <motion.div
                     key={index}
                     variants={itemVariants}
-                    className="bg-white rounded-lg border border-[#E5E7EB] p-8 hover:shadow-lg transition-shadow"
+                    className="bg-white rounded-lg border border-[#E5E7EB] p-8 hover:shadow-lg transition-shadow flex flex-col"
                   >
                     <div className="mb-4 p-3 bg-blue-100 rounded-lg w-fit">
                       <Icon className="h-6 w-6 text-[#2563EB]" />
@@ -245,15 +245,17 @@ export default function CareerPage() {
               </h2>
             </motion.div>
 
-            <motion.div className="grid md:grid-cols-4 gap-8">
+            <motion.div className="grid md:grid-cols-4 gap-8 relative">
+              {/* connector line */}
+              <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-[#BFDBFE] z-0" />
               {[
                 { step: '1', title: 'Application', desc: 'Submit your resume' },
                 { step: '2', title: 'Screening', desc: 'Initial review of profile' },
                 { step: '3', title: 'Interview', desc: 'Technical discussion' },
                 { step: '4', title: 'Offer', desc: 'Final selection and offer' },
               ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-[#2563EB] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                <div key={index} className="text-center relative z-10">
+                  <div className="bg-[#2563EB] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold ring-4 ring-white">
                     {item.step}
                   </div>
                   <h3 className="font-bold text-[#0B1F3B]">{item.title}</h3>
@@ -273,7 +275,7 @@ export default function CareerPage() {
               Share your resume with us and explore opportunities to grow with our firm
             </p>
             <Link href="/contact">
-              <Button className="bg-[#2563EB]">Get in Touch</Button>
+              <Button className="bg-[#2563EB] hover:bg-[#1D4ED8] text-white">Get in Touch</Button>
             </Link>
           </div>
         </section>

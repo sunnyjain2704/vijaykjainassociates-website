@@ -10,6 +10,7 @@ import {
   TrendingUp,
   DollarSign,
   Shield,
+  Users,
 } from "lucide-react";
 
 export function Services() {
@@ -34,15 +35,21 @@ export function Services() {
     },
     {
       icon: Shield,
-      title: "Internal Audit & Process Review",
+      title: "Risk & Compliance",
       description:
-        "Internal audit and business process review with focus on risk assessment and internal controls.",
+        "Risk assessment, IFC implementation, regulatory compliance and fraud prevention.",
+    },
+    {
+      icon: Users,
+      title: "Corporate Services",
+      description:
+        "Company incorporation, ROC compliance, corporate governance and regulatory filings.",
     },
     {
       icon: DollarSign,
       title: "Business Consulting",
       description:
-        "Costing, profitability analysis, SOP development and strategic advisory.",
+        "Working capital planning, fund raising support, profitability analysis and budgeting.",
     },
   ];
 

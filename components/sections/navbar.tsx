@@ -28,17 +28,15 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
             
-            {/* ✅ Bigger logo */}
             <Image
               src="/logo.png"
               alt="Vijay K. Jain & Associates"
               width={80}
               height={80}
-              className="object-contain"
+              className="h-10 w-auto sm:h-12 lg:h-16 object-contain"
             />
 
-            {/* ✅ Slightly bigger text */}
-            <span className="font-poppins font-bold text-[#0B1F3B] text-xl lg:text-3xl leading-tight">
+            <span className="font-poppins font-bold text-[#0B1F3B] text-lg sm:text-2xl lg:text-3xl leading-tight">
               Vijay K. Jain & Associates
             </span>
           </Link>
@@ -49,7 +47,7 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-[#6B7280] hover:text-[#0B1F3B] transition-colors"
+                className="px-3 py-2 text-base font-medium text-[#6B7280] hover:text-[#0B1F3B] transition-colors"
               >
                 {item.label}
               </Link>
