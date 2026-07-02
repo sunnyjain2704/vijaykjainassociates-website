@@ -76,16 +76,6 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <a
-                  href="https://www.icai.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#2563EB]"
-                >
-                  ICAI
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -122,7 +112,7 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-[#2563EB] mt-0.5" />
                 <span>
-                  307, Manas Bhawan Extension, <br />11, RNT Marg, Indore – 452001
+                  307, Manas Bhawan Extension, <br />315-316, Bharti Bhawan, <br />11, RNT Marg, Indore – 452001
                 </span>
               </div>
             </div>
@@ -138,8 +128,6 @@ export function Footer() {
             © {new Date().getFullYear()} Vijay K Jain & Associates. All rights
             reserved.
           </p>
-
-          <p className="text-sm text-[#9CA3AF]">Registered with ICAI</p>
         </div>
       </div>
     </footer>

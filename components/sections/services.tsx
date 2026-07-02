@@ -2,7 +2,6 @@
 
 "use client";
 
-import { motion } from "framer-motion";
 import { ServiceCard } from "@/components/service-card";
 import {
   Calculator,
@@ -53,76 +52,31 @@ export function Services() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const headerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
     <section id="services" className="py-20 bg-[#F8FAFC]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          className="text-center space-y-4 mb-16"
-          variants={headerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="text-center space-y-4 mb-16 opacity-100">
           <div className="inline-block px-4 py-1 bg-blue-50 rounded-full">
             <p className="text-sm font-semibold text-[#2563EB]">Our Services</p>
           </div>
 
-          {/* ✅ FIXED */}
           <h2 className="text-4xl sm:text-5xl font-bold text-[#0B1F3B] font-poppins">
             Professional Services
           </h2>
 
-          {/* ✅ FIXED */}
           <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
             We provide audit, taxation, compliance and financial advisory
             services tailored to diverse business needs.
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto opacity-100">
           {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <ServiceCard {...service} />
-            </motion.div>
+            <ServiceCard key={index} {...service} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,16 +1,15 @@
 
 'use client';
 
-import { motion } from 'framer-motion';
-import { Award, CheckCircle, Shield, Users } from 'lucide-react';
+import { CheckCircle, Cpu, Shield, Users } from 'lucide-react';
 
 export function Trust() {
   const credentials = [
     {
-      icon: Award,
-      title: 'ICAI Registered',
+      icon: Cpu,
+      title: 'Technology Driven Solutions',
       description:
-        'All professionals registered with the Institute of Chartered Accountants of India (ICAI)',
+        'Leveraging modern accounting and compliance tools for efficient, accurate and streamlined services',
     },
     {
       icon: Shield,
@@ -32,37 +31,11 @@ export function Trust() {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
-    },
-  };
-
   return (
     <section className="py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16 opacity-100">
           <div className="inline-block px-4 py-1 bg-blue-50 rounded-full border border-blue-100 mb-4">
             <p className="text-sm font-semibold text-[#2563EB]">
               Credentials & Trust
@@ -76,21 +49,14 @@ export function Trust() {
           <p className="text-lg text-[#6B7280] max-w-3xl mx-auto">
             Our work is built on integrity, experience and a strong commitment to professional standards.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 opacity-100">
           {credentials.map((cred, index) => {
             const Icon = cred.icon;
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
                 className="group bg-[#F8FAFC] rounded-lg border border-[#E5E7EB] p-8 hover:border-[#2563EB] hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <div className="mb-4 w-fit rounded-lg bg-blue-100 p-3 group-hover:bg-[#2563EB] transition-all">
@@ -104,10 +70,10 @@ export function Trust() {
                 <p className="text-[#6B7280] text-sm">
                   {cred.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

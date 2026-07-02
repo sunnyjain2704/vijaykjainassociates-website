@@ -14,7 +14,7 @@ export function WhyChooseUs() {
       icon: Users,
       title: "Expert Professionals",
       description:
-        "ICAI-registered CAs with deep expertise across audit, taxation, advisory and compliance domains.",
+        "Experienced CAs with deep expertise across audit, taxation, advisory and compliance domains.",
     },
     {
       icon: Lock,

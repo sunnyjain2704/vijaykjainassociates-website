@@ -176,7 +176,6 @@ export default function AboutPage() {
                   </h3>
 
                   {[
-                    "ICAI registered chartered accountants",
                     "Over 30 years of professional experience",
                     "Diverse industry exposure",
                     "Client-centric and solution-driven approach",

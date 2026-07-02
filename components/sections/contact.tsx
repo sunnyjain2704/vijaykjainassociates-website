@@ -65,6 +65,7 @@ export function Contact() {
                 <h3 className="font-semibold text-[#0B1F3B]">Address</h3>
                 <p className="text-[#6B7280]">
                   307, Manas Bhawan Extension,
+                  <br />315-316, Bharti Bhawan,
                   <br />11, RNT Marg, Indore – 452001
                 </p>
               </div>

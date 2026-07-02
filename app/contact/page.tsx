@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Office Address",
-    details: ["307, Manas Bhawan Extension,", "11, RNT Marg, Indore – 452001"],
+    details: ["307, Manas Bhawan Extension,", "315-316, Bharti Bhawan,", "11, RNT Marg, Indore – 452001"],
   },
   {
     icon: Clock,
