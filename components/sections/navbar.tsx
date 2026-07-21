@@ -23,20 +23,20 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* ✅ Increased height */}
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between min-h-20 py-2">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 min-w-0">
 
             <Image
               src="/logo.png"
               alt="Vijay K. Jain & Associates"
               width={80}
               height={80}
-              className="h-10 w-auto sm:h-12 lg:h-16 object-contain flex-shrink-0 self-center"
+              className="h-6 w-auto sm:h-7 lg:h-9 object-contain flex-shrink-0 self-center"
             />
 
-            <span className="font-poppins font-semibold tracking-[0.02em] text-[#0B1F3B] text-lg sm:text-2xl lg:text-3xl leading-none self-center">
+            <span className="font-poppins font-semibold tracking-[0.02em] text-[#0B1F3B] text-xl sm:text-2xl lg:text-3xl leading-none self-center">
               Vijay K. Jain & Associates
             </span>
           </Link>
@@ -63,7 +63,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-slate-900 focus:outline-none"
+            className="md:hidden flex-shrink-0 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-slate-900 focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
